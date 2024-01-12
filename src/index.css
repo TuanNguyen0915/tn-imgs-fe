@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 500;
+}
+
+@layer components {
+  .container {
+    @apply px-2 max-w-full
+  }
+
+  .btn {
+    @apply flex w-full items-center justify-center gap-2 rounded-lg border border-emerald-600 bg-emerald-600 p-1 text-base text-slate-100 transition-all duration-500 ease-in-out hover:bg-transparent hover:text-black md:text-lg dark:hover:text-slate-200
+  }
+
+  .linkText {
+    @apply text-slate-500 md:text-xl hover:text-emerald-600
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
