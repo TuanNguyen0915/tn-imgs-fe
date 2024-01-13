@@ -69,10 +69,9 @@ const fetchImageSize = async (imgURL) => {
   }
 }
 
-const formatCreatedDate = async (createAt) => {
-  
-  const date = await createAt?.split("T")[0]
-  if (!date) return ''
+const formatCreatedDate = (createAt) => {
+  if (!createAt) return ''
+  const date = createAt.split("T")[0]
   return new Date(date).toLocaleDateString("en-us", {
     weekday: "long",
     year: "numeric",
@@ -81,10 +80,10 @@ const formatCreatedDate = async (createAt) => {
   });
 }
 
-const formatShortCreatedDate = async (createAt) => {
-  
-  const date = await createAt?.split("T")[0]
-  if (!date) return ''
+const formatShortCreatedDate = (createAt) => {
+  if (!createAt) return ''
+
+  const date = createAt.split("T")[0]
   return new Date(date).toLocaleDateString("en-us", {
     year: "numeric",
     month: "numeric",
