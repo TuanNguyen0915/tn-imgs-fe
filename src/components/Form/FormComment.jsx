@@ -18,13 +18,19 @@ const CommentForm = ({ handleSubmit, user }) => {
     });
   };
   if (!user) {
-    return(
+    return (
       <div className="mt-4">
-        <h1 className="text-center">Please <span>
-          <Link to='/login' className="text-emerald-600 font-bold">log in</Link>
-          </span> to add new comment</h1>
+        <h1 className="text-center">
+          Please{" "}
+          <span>
+            <Link to="/login" className="font-bold text-emerald-600">
+              log in
+            </Link>
+          </span>{" "}
+          to add new comment
+        </h1>
       </div>
-    )
+    );
   }
   return (
     <form
@@ -46,7 +52,9 @@ const CommentForm = ({ handleSubmit, user }) => {
         />
       </div>
       <div className="flex w-full items-center justify-center md:w-1/6">
-        <button className="btn w-1/3 md:w-full">Post</button>
+        <button type="button" className="btn w-1/3 md:w-full" onSubmit={handleSubmitForm}>
+          Post
+        </button>
       </div>
     </form>
   );

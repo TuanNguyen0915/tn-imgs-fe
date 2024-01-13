@@ -22,7 +22,7 @@ const SideBar = ({ closeToggle }) => {
   const isNotActiveStyle =
     "text-slate-700/60 flex items-center gap-3 px-5 transition-all duration-150 capitalize ease-in-out hover:text-emerald-600";
 
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState('dark');
   const element = document.documentElement;
   useEffect(() => {
     switch (theme) {
